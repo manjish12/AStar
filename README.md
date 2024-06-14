@@ -1,4 +1,5 @@
 Pathfinding Using A*.
+
 The A* (A-star) algorithm is a popular pathfinding algorithm used in various applications such as robotics, video games, and route planning. It efficiently finds the shortest path between two points on a graph, taking into account both the cost of reaching each node and the estimated cost from the current node to the goal node.
 This Pathfinding project is a Java application, designed to visualize pathfinding algorithms on a grid-based map. It allows users to set start and goal points, add obstacles, and visualize the process of finding the shortest path between the start and goal points using the A* algorithm.
 
