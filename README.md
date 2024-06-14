@@ -28,7 +28,8 @@ Provides methods to set node properties and handle node clicks.
 Implements KeyListener to handle keyboard input.
 Listens for the ENTER key press to trigger autosearch.
 
-How it Runs
+How it Runs:
+
 To execute the program and visualize the pathfinding algorithm in action, you should run the "Main.java" class, as it serves as the entry point for the application. Once     executed, the program will display a graphical user interface (GUI) window containing the grid-based visualization panel. From there, you can interact with the program by    setting start and goal points, adding obstacles, and triggering the pathfinding algorithm automatically.
 
 Initialization:
