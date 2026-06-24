@@ -20,7 +20,7 @@ public class Demo extends JPanel {
     int step = 0;
 
     // Tracks what mode the user is in: "START", "GOAL", or "WALL"
-    String currentMode = "WALL";
+    String currentMode = "START";
 
     public Demo() {
         this.setPreferredSize(new Dimension(screenWidth, screenHeight));
@@ -100,10 +100,10 @@ public class Demo extends JPanel {
         }
 
         // Reset search state but KEEP walls, start, goal
-        goalReached = false;
-        openList.clear();
-        checkedList.clear();
-        currentNode = startNode;
+            openList.clear();
+            checkedList.clear();
+            currentNode = startNode;
+            openList.add(startNode);
 
         // Reset only the search colors (not walls/start/goal)
         for (int c = 0; c < maxCol; c++) {
@@ -119,7 +119,7 @@ public class Demo extends JPanel {
         }
         recalcCosts();
 
-        while (goalReached == false && openList.size() > 0) {
+        while (!goalReached && !openList.isEmpty()) {
             int col = currentNode.col;
             int row = currentNode.row;
 
@@ -134,15 +134,15 @@ public class Demo extends JPanel {
 
             // No path found
            // No path found - surrounded by walls or blocked!
-            if (openList.size() == 0) {
-                JOptionPane.showMessageDialog(
-                    this,
-                    "No path found!\nThe Start node is completely blocked by walls.",
-                    "Path Blocked",
-                    JOptionPane.ERROR_MESSAGE
-                );
-                return;
-            }
+           if (openList.isEmpty()) {
+    JOptionPane.showMessageDialog(
+        this,
+        "No path found!\nThe goal is unreachable.",
+        "Path Blocked",
+        JOptionPane.ERROR_MESSAGE
+    );
+    return;
+}
 
             int bestNodeIndex = 0;
             int bestNodefCost = 999;

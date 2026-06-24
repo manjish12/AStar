@@ -19,7 +19,7 @@ public class Main {
         JPanel controlPanel = new JPanel(new FlowLayout(FlowLayout.LEFT, 10, 8));
         controlPanel.setBackground(Color.DARK_GRAY);
 
-        JLabel modeLabel = new JLabel("Mode: WALL");
+        JLabel modeLabel = new JLabel("Mode: SET START");
         modeLabel.setForeground(Color.white);
         modeLabel.setFont(new Font("Arial", Font.BOLD, 14));
 
@@ -66,8 +66,8 @@ public class Main {
         });
         btnReset.addActionListener(e -> {
             demo.resetAll();
-            modeLabel.setText("Mode: WALL");
-            demo.setMode("WALL");
+            modeLabel.setText("Mode: SET START");
+            demo.setMode("START");
             demo.requestFocusInWindow();
         });
 
