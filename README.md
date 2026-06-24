@@ -39,8 +39,9 @@ draw walls, and watch the algorithm find the shortest path.
 4. Click the ▶ Run button above the main method
 5. or
 6. Open terminal in vs-code or cmd
-7. Compile Demo, Node, KeyHandler.java by running command      `javac Demo.java` for all the `.java file`in terminal
-8. Then, run `Main.java` using command `java Main`
+7. Compile Demo, Node, KeyHandler and Main.java by running command `javac "filename".java` for all the `.java` file in terminal
+8. Make sure each `.java` file have generated `.class` files
+9. Then, run `Main.java` file using command `java Main`
 
 ---
 
